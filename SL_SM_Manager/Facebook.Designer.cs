@@ -42,7 +42,11 @@
             this.clearButton = new System.Windows.Forms.Button();
             this.submitButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.imgButton2 = new System.Windows.Forms.Button();
+            this.imgUpload2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.imgUpload)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgUpload2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -98,7 +102,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(33, 382);
+            this.label4.Location = new System.Drawing.Point(33, 355);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 17);
             this.label4.TabIndex = 6;
@@ -106,9 +110,9 @@
             // 
             // imgButton
             // 
-            this.imgButton.Location = new System.Drawing.Point(34, 417);
+            this.imgButton.Location = new System.Drawing.Point(34, 390);
             this.imgButton.Name = "imgButton";
-            this.imgButton.Size = new System.Drawing.Size(95, 31);
+            this.imgButton.Size = new System.Drawing.Size(106, 31);
             this.imgButton.TabIndex = 7;
             this.imgButton.Text = "Add Image";
             this.imgButton.UseVisualStyleBackColor = true;
@@ -132,16 +136,16 @@
             // 
             // imgUpload
             // 
-            this.imgUpload.Location = new System.Drawing.Point(209, 363);
+            this.imgUpload.Location = new System.Drawing.Point(172, 338);
             this.imgUpload.Name = "imgUpload";
-            this.imgUpload.Size = new System.Drawing.Size(320, 156);
+            this.imgUpload.Size = new System.Drawing.Size(357, 220);
             this.imgUpload.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgUpload.TabIndex = 10;
             this.imgUpload.TabStop = false;
             // 
             // clearButton
             // 
-            this.clearButton.Location = new System.Drawing.Point(374, 554);
+            this.clearButton.Location = new System.Drawing.Point(209, 838);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(75, 23);
             this.clearButton.TabIndex = 11;
@@ -151,7 +155,7 @@
             // 
             // submitButton
             // 
-            this.submitButton.Location = new System.Drawing.Point(467, 554);
+            this.submitButton.Location = new System.Drawing.Point(454, 838);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(75, 23);
             this.submitButton.TabIndex = 12;
@@ -161,7 +165,7 @@
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(278, 554);
+            this.closeButton.Location = new System.Drawing.Point(333, 838);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(75, 23);
             this.closeButton.TabIndex = 13;
@@ -169,11 +173,42 @@
             this.closeButton.UseVisualStyleBackColor = true;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(30, 594);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(116, 17);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Image to Post(2):";
+            // 
+            // imgButton2
+            // 
+            this.imgButton2.Location = new System.Drawing.Point(33, 627);
+            this.imgButton2.Name = "imgButton2";
+            this.imgButton2.Size = new System.Drawing.Size(103, 31);
+            this.imgButton2.TabIndex = 15;
+            this.imgButton2.Text = "Add Image 2";
+            this.imgButton2.UseVisualStyleBackColor = true;
+            this.imgButton2.Click += new System.EventHandler(this.imgButton2_Click);
+            // 
+            // imgUpload2
+            // 
+            this.imgUpload2.Location = new System.Drawing.Point(169, 594);
+            this.imgUpload2.Name = "imgUpload2";
+            this.imgUpload2.Size = new System.Drawing.Size(357, 220);
+            this.imgUpload2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgUpload2.TabIndex = 16;
+            this.imgUpload2.TabStop = false;
+            // 
             // Facebook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 589);
+            this.ClientSize = new System.Drawing.Size(582, 889);
+            this.Controls.Add(this.imgUpload2);
+            this.Controls.Add(this.imgButton2);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.clearButton);
@@ -191,6 +226,7 @@
             this.Name = "Facebook";
             this.Text = "Facebook";
             ((System.ComponentModel.ISupportInitialize)(this.imgUpload)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgUpload2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,5 +248,8 @@
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.Button submitButton;
         private System.Windows.Forms.Button closeButton;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button imgButton2;
+        private System.Windows.Forms.PictureBox imgUpload2;
     }
 }
