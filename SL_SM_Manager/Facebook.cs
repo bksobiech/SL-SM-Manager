@@ -31,8 +31,7 @@ namespace SL_SM_Manager
         private void clearButton_Click(object sender, EventArgs e)
         {
             nameBox.Text = "";
-            dateBox.Text = "";
-            rDateBox.Text = "";
+            dateTimePicker1.Value = DateTime.Today;
             contentBox.Text = "";
             imgUpload.Image = null;
             imgUpload2.Image = null;
@@ -77,8 +76,9 @@ namespace SL_SM_Manager
                 SaveFileDialog dlg = new SaveFileDialog();
                 dlg.Filter = "PDF Files|*.pdf";
                 dlg.FilterIndex = 0;
-
                 string fileName = string.Empty;
+
+                DateTime now = DateTime.Today;
 
                 if (dlg.ShowDialog() == DialogResult.OK)
                 {
@@ -93,26 +93,45 @@ namespace SL_SM_Manager
                     //set fonts - all doc use
                     BaseFont hel = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, false);
 
-                    iTextSharp.text.Font boldHel = new iTextSharp.text.Font(hel, 22, iTextSharp.text.Font.BOLD);
+                    iTextSharp.text.Font boldHel = new iTextSharp.text.Font(hel, 26, iTextSharp.text.Font.BOLD);
                     iTextSharp.text.Font labelHel = new iTextSharp.text.Font(hel, 16, iTextSharp.text.Font.BOLD);
                     iTextSharp.text.Font smallHel = new iTextSharp.text.Font(hel, 12);
+                    iTextSharp.text.Font xSmallHel = new iTextSharp.text.Font(hel, 8);
 
 
                     //set logo - top left header
                     iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance("Servant-Leadership+Logo.jpg");
                     logo.ScalePercent(50f);
                     pdfDoc.Add(logo);
+                    pdfDoc.Add(new Paragraph("      Social Media Request Form", xSmallHel));
+                    pdfDoc.Add(new Paragraph("      "+now.ToString("MM/dd/yyy"), xSmallHel));
 
-                    //title - center
                     Paragraph title = new Paragraph("Facebook Request", boldHel);
                     title.Alignment = Element.ALIGN_CENTER;
                     pdfDoc.Add(title);
 
+                    PdfPTable table = new PdfPTable(2);
+                    table.DefaultCell.Border = iTextSharp.text.Rectangle.NO_BORDER;
+                    table.HorizontalAlignment = Element.ALIGN_LEFT;
+
+                    //blank formatting space
+                    table.AddCell(" ");
+                    table.AddCell(" ");
+                    table.AddCell(" ");
+                    table.AddCell(" ");
+
                     //request name - left
                     Paragraph rName = new Paragraph("Request Name:", labelHel);
-                    Paragraph rText = new Paragraph(nameBox.Text, smallHel);
-                    pdfDoc.Add(rName);
-                    pdfDoc.Add(rText);
+                    Paragraph rTitleText = new Paragraph(nameBox.Text, smallHel);
+                    table.AddCell(rName);
+                    table.AddCell(rTitleText);
+
+                    //blank formatting space
+                    table.AddCell(" ");
+                    table.AddCell(" ");
+
+
+                    pdfDoc.Add(table);
 
                     //image 1 - if null, pass
                     if (imgUploadPath != null)
@@ -130,7 +149,19 @@ namespace SL_SM_Manager
                         pdfDoc.Add(uploadImage2);
                     }
 
+                    
+
                     pdfDoc.Close();
+
+                    if (imgUpload.Image != null)
+                    {
+                        imgUpload.Image.Save(dlg.FileName + "-image1.jpg");
+                    }
+                    if (imgUpload2.Image != null)
+                    {
+                        imgUpload2.Image.Save(dlg.FileName + "-image2.jpg");
+                    }
+
                     Close();
 
                 }
