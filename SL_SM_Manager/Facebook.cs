@@ -130,27 +130,52 @@ namespace SL_SM_Manager
                     table.AddCell(" ");
                     table.AddCell(" ");
 
+                    //date for request to be posted
+                    Paragraph rDate = new Paragraph("Date To Be Posted:", labelHel);
+                    Paragraph rDateText = new Paragraph(dateTimePicker1.Value.ToString("MM/dd/yyy"), smallHel);
+                    table.AddCell(rDate);
+                    table.AddCell(rDateText);
 
-                    pdfDoc.Add(table);
+                    //blank formatting space
+                    table.AddCell(" ");
+                    table.AddCell(" ");
+
+                    Paragraph rContent = new Paragraph("Text Content:", labelHel);
+                    Paragraph rContentText = new Paragraph(contentBox.Text, smallHel);
+                    table.AddCell(rContent);
+                    table.AddCell(rContentText);
+
+                    //blank formatting space
+                    table.AddCell(" ");
+                    table.AddCell(" ");
+                    
 
                     //image 1 - if null, pass
+                    Paragraph rimg1 = new Paragraph("Image 1:", labelHel);
+                    table.AddCell(rimg1);
                     if (imgUploadPath != null)
                     {
                         uploadImage1 = iTextSharp.text.Image.GetInstance(imgUploadPath);
                         uploadImage1.ScaleToFit(100, 100);
-                        pdfDoc.Add(uploadImage1);
+                        table.AddCell(uploadImage1);
                     }
 
+                    //blank formatting space
+                    table.AddCell(" ");
+                    table.AddCell(" ");
+
                     //image 2 - if null, pass
+                    Paragraph rimg2 = new Paragraph("Image 2:", labelHel);
+                    table.AddCell(rimg2);
                     if (imgUploadPath2 != null)
                     {
                         uploadImage2 = iTextSharp.text.Image.GetInstance(imgUploadPath2);
                         uploadImage2.ScaleToFit(100, 100);
-                        pdfDoc.Add(uploadImage2);
+                        table.AddCell(uploadImage2);
                     }
 
-                    
 
+                    pdfDoc.Add(table);
                     pdfDoc.Close();
 
                     if (imgUpload.Image != null)
