@@ -5,7 +5,7 @@
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="10,97,0,0" TextWrapping="Wrap" Text="Servant Leadership Social Media Managemment Console" VerticalAlignment="Top" Width="508" FontSize="18" FontWeight="Bold"/>
         <Image HorizontalAlignment="Left" Height="87" Margin="135,10,0,0" VerticalAlignment="Top" Width="273" Source="Servant-Leadership+Logo.jpg"/>
-        <TextBlock HorizontalAlignment="Left" Margin="29,126,0,0" TextWrapping="Wrap" Text="Please select the forms you wouldd like to create:" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="29,126,0,0" TextWrapping="Wrap" Text="Please select the forms you would like to create:" VerticalAlignment="Top" FontSize="16"/>
         <CheckBox x:Name="faceBox" Content="Facebook" HorizontalAlignment="Left" Margin="75,164,0,0" VerticalAlignment="Top" FontSize="14"/>
         <CheckBox x:Name="twitBox" Content="Twitter" HorizontalAlignment="Left" Margin="75,198,0,0" VerticalAlignment="Top" FontSize="14"/>
         <CheckBox x:Name="snapBox" Content="Snapchat" HorizontalAlignment="Left" Margin="75,235,0,0" VerticalAlignment="Top" FontSize="14"/>

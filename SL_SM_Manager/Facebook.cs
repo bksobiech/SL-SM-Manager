@@ -97,6 +97,7 @@ namespace SL_SM_Manager
                     iTextSharp.text.Font labelHel = new iTextSharp.text.Font(hel, 16, iTextSharp.text.Font.BOLD);
                     iTextSharp.text.Font smallHel = new iTextSharp.text.Font(hel, 12);
                     iTextSharp.text.Font xSmallHel = new iTextSharp.text.Font(hel, 8);
+                    iTextSharp.text.Font xSmalliHel = new iTextSharp.text.Font(hel, 8, iTextSharp.text.Font.ITALIC);
 
 
                     //set logo - top left header
@@ -151,12 +152,12 @@ namespace SL_SM_Manager
                     
 
                     //image 1 - if null, pass
-                    Paragraph rimg1 = new Paragraph("Image 1:", labelHel);
-                    table.AddCell(rimg1);
                     if (imgUploadPath != null)
                     {
+                        Paragraph rimg1 = new Paragraph("Image 1:", labelHel);
+                        table.AddCell(rimg1);
                         uploadImage1 = iTextSharp.text.Image.GetInstance(imgUploadPath);
-                        uploadImage1.ScaleToFit(100, 100);
+                        uploadImage1.ScaleToFit(200, 150);
                         table.AddCell(uploadImage1);
                     }
 
@@ -165,17 +166,28 @@ namespace SL_SM_Manager
                     table.AddCell(" ");
 
                     //image 2 - if null, pass
-                    Paragraph rimg2 = new Paragraph("Image 2:", labelHel);
-                    table.AddCell(rimg2);
                     if (imgUploadPath2 != null)
                     {
+                        Paragraph rimg2 = new Paragraph("Image 2:", labelHel);
+                        table.AddCell(rimg2);
                         uploadImage2 = iTextSharp.text.Image.GetInstance(imgUploadPath2);
-                        uploadImage2.ScaleToFit(100, 100);
+                        uploadImage2.ScaleToFit(200, 150);
                         table.AddCell(uploadImage2);
                     }
 
 
                     pdfDoc.Add(table);
+
+                    Paragraph footer = new Paragraph("Please send this request to hub@msoe.edu for further processing.", xSmalliHel);
+                    footer.Alignment = Element.ALIGN_CENTER;
+                    Paragraph footerb = new Paragraph("Please include the raw images saved to the same location of the form.", xSmalliHel);
+                    footerb.Alignment = Element.ALIGN_CENTER;
+                    Paragraph footer2 = new Paragraph("If you would like this to be posted ASAP, please text the information to Dana Grenier.", xSmalliHel);
+                    footer2.Alignment = Element.ALIGN_CENTER;
+                    pdfDoc.Add(footer);
+                    pdfDoc.Add(footerb);
+                    pdfDoc.Add(footer2);
+
                     pdfDoc.Close();
 
                     if (imgUpload.Image != null)

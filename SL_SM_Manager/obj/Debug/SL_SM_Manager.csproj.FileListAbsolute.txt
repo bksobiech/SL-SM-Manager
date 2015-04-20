@@ -64,3 +64,4 @@ C:\Users\bksobiech\Documents\Git\SL-SM-Manager\SL_SM_Manager\obj\Debug\SL_SM_Man
 C:\Users\bksobiech\Documents\Git\SL-SM-Manager\SL_SM_Manager\obj\Debug\SL_SM_Manager.Facebook.resources
 C:\Users\bksobiech\Documents\Git\SL-SM-Manager\SL_SM_Manager\obj\Debug\SL_SM_Manager.Properties.Resources.resources
 C:\Users\bksobiech\Documents\Git\SL-SM-Manager\SL_SM_Manager\obj\Debug\SL_SM_Manager.csproj.GenerateResource.Cache
+C:\Users\bksobiech\Documents\Git\SL-SM-Manager\SL_SM_Manager\obj\Debug\SL_SM_Manager.Snapchat.resources

@@ -37,6 +37,12 @@ namespace SL_SM_Manager
                 Facebook fbook = new Facebook();
                 fbook.Show();
             }
+
+            if (snapBox.IsChecked == true)
+            {
+                Snapchat snap = new Snapchat();
+                snap.Show();
+            }
         }
     }
 }
