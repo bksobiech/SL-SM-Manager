@@ -43,6 +43,24 @@ namespace SL_SM_Manager
                 Snapchat snap = new Snapchat();
                 snap.Show();
             }
+
+            if (twitBox.IsChecked == true)
+            {
+                Twitter twitter = new Twitter();
+                twitter.Show();
+            }
+
+            if (twitBox.IsChecked == true)
+            {
+                Twitter twitter = new Twitter();
+                twitter.Show();
+            }
+
+            if (hubBox.IsChecked == true)
+            {
+                Hub hub = new Hub();
+                hub.Show();
+            }
         }
     }
 }

@@ -64,11 +64,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Hub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hub.Designer.cs">
+      <DependentUpon>Hub.cs</DependentUpon>
+    </Compile>
     <Compile Include="Snapchat.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Snapchat.Designer.cs">
       <DependentUpon>Snapchat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Twitter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Twitter.Designer.cs">
+      <DependentUpon>Twitter.cs</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -112,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Snapchat.resx">
       <DependentUpon>Snapchat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Twitter.resx">
+      <DependentUpon>Twitter.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
