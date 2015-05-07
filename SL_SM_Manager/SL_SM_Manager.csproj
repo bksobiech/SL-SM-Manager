@@ -70,6 +70,7 @@
     <Compile Include="Hub.Designer.cs">
       <DependentUpon>Hub.cs</DependentUpon>
     </Compile>
+    <Compile Include="SendFileTo.cs" />
     <Compile Include="Snapchat.cs">
       <SubType>Form</SubType>
     </Compile>

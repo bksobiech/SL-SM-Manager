@@ -50,11 +50,6 @@ namespace SL_SM_Manager
                 twitter.Show();
             }
 
-            if (twitBox.IsChecked == true)
-            {
-                Twitter twitter = new Twitter();
-                twitter.Show();
-            }
 
             if (hubBox.IsChecked == true)
             {

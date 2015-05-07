@@ -9,9 +9,9 @@
         <CheckBox x:Name="faceBox" Content="Facebook" HorizontalAlignment="Left" Margin="75,164,0,0" VerticalAlignment="Top" FontSize="14"/>
         <CheckBox x:Name="twitBox" Content="Twitter" HorizontalAlignment="Left" Margin="75,198,0,0" VerticalAlignment="Top" FontSize="14"/>
         <CheckBox x:Name="snapBox" Content="Snapchat" HorizontalAlignment="Left" Margin="75,235,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <CheckBox x:Name="hubBox" Content="MSOE Hub" HorizontalAlignment="Left" Margin="197,164,0,0" VerticalAlignment="Top" FontSize="14"/>
         <Button x:Name="resetButton" Content="Exit" HorizontalAlignment="Left" Margin="417,270,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="resetButton_Click"/>
         <Button x:Name="continueButton" Content="Continue" HorizontalAlignment="Left" Margin="319,270,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="continueButton_Click"/>
-        <CheckBox x:Name="hubBox" Content="MSOE Hub" HorizontalAlignment="Left" Margin="197,164,0,0" VerticalAlignment="Top" FontSize="14"/>
 
     </Grid>
 </Window>

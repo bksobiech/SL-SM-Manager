@@ -11,6 +11,7 @@ using System.IO;
 using iTextSharp;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using SendFileTo;
 
 
 namespace SL_SM_Manager
@@ -217,6 +218,12 @@ namespace SL_SM_Manager
 
                 Close();
 
+
+                MAPI mapi = new MAPI();
+
+                mapi.AddAttachment(imgUploadPath);
+                mapi.AddRecipientTo("ksobiechb@msoe.edu");
+                mapi.SendMailPopup("testing", "body text");
             }
 
         }
