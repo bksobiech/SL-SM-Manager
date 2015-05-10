@@ -5,14 +5,38 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SL_SM_Manager", "SL_SM_Mana
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CD_ROM|Any CPU = CD_ROM|Any CPU
+		Custom|Any CPU = Custom|Any CPU
 		Debug|Any CPU = Debug|Any CPU
+		DVD-10|Any CPU = DVD-10|Any CPU
+		DVD-18|Any CPU = DVD-18|Any CPU
+		DVD-5|Any CPU = DVD-5|Any CPU
+		DVD-9|Any CPU = DVD-9|Any CPU
 		Release|Any CPU = Release|Any CPU
+		SingleImage|Any CPU = SingleImage|Any CPU
+		WebDeployment|Any CPU = WebDeployment|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3779E74-1820-4266-851B-EDE71D9BD635}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{B3779E74-1820-4266-851B-EDE71D9BD635}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{B3779E74-1820-4266-851B-EDE71D9BD635}.Custom|Any CPU.ActiveCfg = Release|Any CPU
+		{B3779E74-1820-4266-851B-EDE71D9BD635}.Custom|Any CPU.Build.0 = Release|Any CPU
 		{B3779E74-1820-4266-851B-EDE71D9BD635}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B3779E74-1820-4266-851B-EDE71D9BD635}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3779E74-1820-4266-851B-EDE71D9BD635}.DVD-10|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3779E74-1820-4266-851B-EDE71D9BD635}.DVD-10|Any CPU.Build.0 = Debug|Any CPU
+		{B3779E74-1820-4266-851B-EDE71D9BD635}.DVD-18|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3779E74-1820-4266-851B-EDE71D9BD635}.DVD-18|Any CPU.Build.0 = Debug|Any CPU
+		{B3779E74-1820-4266-851B-EDE71D9BD635}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3779E74-1820-4266-851B-EDE71D9BD635}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{B3779E74-1820-4266-851B-EDE71D9BD635}.DVD-9|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3779E74-1820-4266-851B-EDE71D9BD635}.DVD-9|Any CPU.Build.0 = Debug|Any CPU
 		{B3779E74-1820-4266-851B-EDE71D9BD635}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3779E74-1820-4266-851B-EDE71D9BD635}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3779E74-1820-4266-851B-EDE71D9BD635}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{B3779E74-1820-4266-851B-EDE71D9BD635}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{B3779E74-1820-4266-851B-EDE71D9BD635}.WebDeployment|Any CPU.ActiveCfg = Release|Any CPU
+		{B3779E74-1820-4266-851B-EDE71D9BD635}.WebDeployment|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
