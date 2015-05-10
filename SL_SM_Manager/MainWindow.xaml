@@ -12,6 +12,8 @@
         <CheckBox x:Name="hubBox" Content="MSOE Hub" HorizontalAlignment="Left" Margin="197,164,0,0" VerticalAlignment="Top" FontSize="14"/>
         <Button x:Name="resetButton" Content="Exit" HorizontalAlignment="Left" Margin="417,270,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="resetButton_Click"/>
         <Button x:Name="continueButton" Content="Continue" HorizontalAlignment="Left" Margin="319,270,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="continueButton_Click"/>
+        <CheckBox x:Name="markBox" Content="Marketing" HorizontalAlignment="Left" Margin="197,200,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <CheckBox x:Name="multBox" Content="Multiple" HorizontalAlignment="Left" Margin="197,237,0,0" VerticalAlignment="Top" FontSize="14"/>
 
     </Grid>
 </Window>

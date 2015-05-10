@@ -192,18 +192,6 @@ namespace SL_SM_Manager
                 table2.AddCell(" ");
 
                 pdfDoc.Add(table2);
-                
-
-                Paragraph footer = new Paragraph("Please send this request to hub@msoe.edu for further processing.", xSmalliHel);
-                footer.Alignment = Element.ALIGN_CENTER;
-                Paragraph footerb = new Paragraph("Please include the raw images saved to the same location of the form.", xSmalliHel);
-                footerb.Alignment = Element.ALIGN_CENTER;
-                Paragraph footer2 = new Paragraph("If you would like this to be posted ASAP, please text the information to Dana Grenier.", xSmalliHel);
-                footer2.Alignment = Element.ALIGN_CENTER;
-                pdfDoc.Add(footer);
-                pdfDoc.Add(footerb);
-                pdfDoc.Add(footer2);
-
                 pdfDoc.Close();
 
                 if (imgUpload.Image != null)

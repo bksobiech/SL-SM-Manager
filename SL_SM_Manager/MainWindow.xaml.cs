@@ -56,6 +56,12 @@ namespace SL_SM_Manager
                 Hub hub = new Hub();
                 hub.Show();
             }
+
+            if (multBox.IsChecked == true)
+            {
+                Multiple mult = new Multiple();
+                mult.Show();
+            }
         }
     }
 }
