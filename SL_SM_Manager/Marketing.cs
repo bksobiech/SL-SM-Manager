@@ -16,7 +16,7 @@ using SendFileTo;
 
 namespace SL_SM_Manager
 {
-    public partial class Multiple : Form
+    public partial class Marketing : Form
     {
         //set 'global' variables - accessible to all methods, etc.
         string imgUploadPath { get; set; }
@@ -24,7 +24,7 @@ namespace SL_SM_Manager
         iTextSharp.text.Image uploadImage1 { get; set; }
         iTextSharp.text.Image uploadImage2 { get; set; }
 
-        public Multiple()
+        public Marketing()
         {
             InitializeComponent();
         }
@@ -108,38 +108,9 @@ namespace SL_SM_Manager
                 pdfDoc.Add(new Paragraph("      Social Media Request Form", xSmallHel));
                 pdfDoc.Add(new Paragraph("      " + now.ToString("MM/dd/yyy"), xSmallHel));
 
-                Paragraph title = new Paragraph("Multiple Request", boldHel);
+                Paragraph title = new Paragraph("Marketing Request", boldHel);
                 title.Alignment = Element.ALIGN_CENTER;
                 pdfDoc.Add(title);
-
-                //choose check boxes
-                Paragraph list= new Paragraph("Outlets to post content to:", labelHel);
-                pdfDoc.Add(list);
-                if (fbookBox.Checked == true)
-                {
-                    Paragraph fList = new Paragraph("Facebook", smallHel);
-                    pdfDoc.Add(fList);
-                }
-                if (twitBox.Checked == true)
-                {
-                    Paragraph tList = new Paragraph("Twitter", smallHel);
-                    pdfDoc.Add(tList);
-                }
-                if (snapBox.Checked == true)
-                {
-                    Paragraph sList = new Paragraph("Snapchat", smallHel);
-                    pdfDoc.Add(sList);
-                }
-                if (hubBox.Checked == true)
-                {
-                    Paragraph hList = new Paragraph("MSOE Hub", smallHel);
-                    pdfDoc.Add(hList);
-                }
-                if (markBox.Checked == true)
-                {
-                    Paragraph mList = new Paragraph("Marketing", smallHel);
-                    pdfDoc.Add(mList);
-                }
 
                 PdfPTable table = new PdfPTable(2);
                 table.DefaultCell.Border = iTextSharp.text.Rectangle.NO_BORDER;
@@ -148,7 +119,8 @@ namespace SL_SM_Manager
                 //blank formatting space
                 table.AddCell(" ");
                 table.AddCell(" ");
-
+                table.AddCell(" ");
+                table.AddCell(" ");
 
                 //request name - left
                 Paragraph rName = new Paragraph("Request Name:", labelHel);
@@ -256,8 +228,8 @@ namespace SL_SM_Manager
                 {
                     mapi.AddAttachment(dlg.FileName);
                 }
-                mapi.AddRecipientTo("hub@msoe.edu");
-                mapi.SendMailPopup("Servant Leadership Request - Multiple", "MSOE Servant Leadership social media request form attached.");
+                mapi.AddRecipientTo("everts@msoe.edu");
+                mapi.SendMailPopup("Servant Leadership Request - Marketing", "MSOE Servant Leadership social media request form attached.");
             }
 
         }

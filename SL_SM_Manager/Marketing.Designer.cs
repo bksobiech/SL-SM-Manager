@@ -1,6 +1,6 @@
 ﻿namespace SL_SM_Manager
 {
-    partial class Hub
+    partial class Marketing
     {
         /// <summary>
         /// Required designer variable.
@@ -193,7 +193,7 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Request Name: ";
             // 
-            // Hub
+            // Marketing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -213,8 +213,8 @@
             this.Controls.Add(this.nameBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Name = "Hub";
-            this.Text = "Hub";
+            this.Name = "Marketing";
+            this.Text = "Marketing";
             ((System.ComponentModel.ISupportInitialize)(this.imgUpload2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgUpload)).EndInit();
             this.ResumeLayout(false);

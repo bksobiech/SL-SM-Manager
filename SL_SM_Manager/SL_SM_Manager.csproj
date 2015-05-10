@@ -70,6 +70,12 @@
     <Compile Include="Hub.Designer.cs">
       <DependentUpon>Hub.cs</DependentUpon>
     </Compile>
+    <Compile Include="Marketing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Marketing.Designer.cs">
+      <DependentUpon>Marketing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Multiple.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,12 @@
     </Compile>
     <EmbeddedResource Include="Facebook.resx">
       <DependentUpon>Facebook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hub.resx">
+      <DependentUpon>Hub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Marketing.resx">
+      <DependentUpon>Marketing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Multiple.resx">
       <DependentUpon>Multiple.cs</DependentUpon>

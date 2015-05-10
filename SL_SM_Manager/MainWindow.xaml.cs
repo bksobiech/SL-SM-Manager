@@ -57,6 +57,12 @@ namespace SL_SM_Manager
                 hub.Show();
             }
 
+            if (markBox.IsChecked == true)
+            {
+                Marketing mark = new Marketing();
+                mark.Show();
+            }
+
             if (multBox.IsChecked == true)
             {
                 Multiple mult = new Multiple();

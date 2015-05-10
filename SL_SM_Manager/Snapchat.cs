@@ -11,6 +11,7 @@ using System.IO;
 using iTextSharp;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using SendFileTo;
 
 namespace SL_SM_Manager
 {
@@ -163,14 +164,32 @@ namespace SL_SM_Manager
 
                 pdfDoc.Add(table2);
 
+                Paragraph footer = new Paragraph("NOTE:  Please alter and use the information provided to best suit the outlet content will be posted to.", xSmalliHel);
+                pdfDoc.Add(footer);
+
                 pdfDoc.Close();
 
                 if (imgUpload.Image != null)
                 {
                     imgUpload.Image.Save(dlg.FileName + "-image1.jpg");
                 }
+                string img1Attach = dlg.FileName + "-image1.jpg";
 
                 Close();
+
+                //Email Composition - if for attach
+                MAPI mapi = new MAPI();
+
+                if (imgUploadPath != null)
+                {
+                    mapi.AddAttachment(img1Attach);
+                }
+                if (dlg.FileName != null)
+                {
+                    mapi.AddAttachment(dlg.FileName);
+                }
+                mapi.AddRecipientTo("hub@msoe.edu");
+                mapi.SendMailPopup("Servant Leadership Request - Snapchat", "MSOE Servant Leadership social media request form attached.");
             }
         }
     }

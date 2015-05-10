@@ -193,6 +193,10 @@ namespace SL_SM_Manager
                 table2.AddCell(" ");
 
                 pdfDoc.Add(table2);
+
+                Paragraph footer = new Paragraph("NOTE:  Please alter and use the information provided to best suit the outlet content will be posted to.", xSmalliHel);
+                pdfDoc.Add(footer);
+
                 pdfDoc.Close();
 
                 if (imgUpload.Image != null)
@@ -224,7 +228,7 @@ namespace SL_SM_Manager
                     mapi.AddAttachment(dlg.FileName);
                 }
                 mapi.AddRecipientTo("hub@msoe.edu");
-                mapi.SendMailPopup("testing", "body text");
+                mapi.SendMailPopup("Servant Leadership Request - Facebook", "MSOE Servant Leadership social media request form attached.");
             }
 
         }
