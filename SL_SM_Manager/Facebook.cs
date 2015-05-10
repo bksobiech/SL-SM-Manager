@@ -215,13 +215,26 @@ namespace SL_SM_Manager
                 {
                     imgUpload2.Image.Save(dlg.FileName + "-image2.jpg");
                 }
+                string img1Attach = dlg.FileName + "-image1.jpg";
+                string img2Attach = dlg.FileName + "-image2.jpg";
 
                 Close();
 
 
                 MAPI mapi = new MAPI();
 
-                mapi.AddAttachment(imgUploadPath);
+                if (imgUploadPath != null)
+                {
+                    mapi.AddAttachment(img1Attach);
+                }
+                if (imgUploadPath2 != null)
+                {
+                    mapi.AddAttachment(img2Attach);
+                }
+                if (dlg.FileName != null)
+                {
+                    mapi.AddAttachment(dlg.FileName);
+                }
                 mapi.AddRecipientTo("ksobiechb@msoe.edu");
                 mapi.SendMailPopup("testing", "body text");
             }
